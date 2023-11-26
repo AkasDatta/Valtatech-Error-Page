@@ -15,18 +15,16 @@ const Navbar = () => {
     <div className='bg-white shadow'>
       <nav className="p-3 md:flex md:items-center md:justify-between max-w-screen-xl mx-auto lg:px-10 overflow-x-hidden">
         <div className="flex justify-between items-center">
-          <Link to="/">
-            <span className="text-2xl font-[Poppins] text-blue-600 font-bold cursor-pointer">
-              CampusGo
-            </span>
-          </Link>
+            <button className="text-3xl text-white bg-[#31334E] px-5 py-3 rounded font-semibold">
+              valtatech
+            </button>
 
-          <span
-            className="text-3xl cursor-pointer mx-2 md:hidden block"
-            onClick={toggleMenu}
-          >
-            {menuOpen ? <FaXmark/> : <FaBars />}
-          </span>
+            <span
+              className="text-3xl cursor-pointer mx-2 md:hidden block"
+              onClick={toggleMenu}
+            >
+              {menuOpen ? <FaXmark/> : <FaBars />}
+            </span>
         </div>
 
         <ul
@@ -35,40 +33,12 @@ const Navbar = () => {
             } transition-all ease-in duration-500`}
         >
 
-          <li className="mx-2 my-3 md:my-0">
-            <Link to="/" className="text-sm text-gray-600  hover:text-blue-600 duration-600">
-              Home
-            </Link>
-          </li>
-          <li className="mx-2 my-3 md:my-0">
-            <Link to="/colleges" className="text-sm text-gray-600 hover:text-blue-600 duration-600">
-              Colleges
-            </Link>
-          </li>
-          <li className="mx-2 my-3 md:my-0">
-            <Link to="/admission" className="text-sm text-gray-600 hover:text-blue-600 duration-600">
-              Admission
-            </Link>
-          </li>
-
-            <li className="mx-2 my-3 md:my-0">
-              <Link to="/mycollege" className="text-sm text-gray-600 hover:text-blue-600 duration-600">
-                My College
-              </Link>
-            </li>
-      
-
-          <div className="form-control mx-2 sm:my-5">
-            <input type="text" placeholder="Search" className="border border-gray-300 rounded-md bg-white w-36 px-2 py-1" />
-          </div>
-
     
             <li className="m-2 text-sm">
-          
-                <span className="text-black">displayName</span>
-          
+              <button className="text-xl text-white bg-[#47496f] px-6 py-3 font-semibold">
+                Contact us
+              </button>
             </li>
-         
         </ul>
       </nav>
     </div>
