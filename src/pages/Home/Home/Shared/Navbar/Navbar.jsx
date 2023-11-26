@@ -36,7 +36,7 @@ const Navbar = () => {
           } transition-all ease-in duration-500`}
         >
           <li className="m-2 text-sm">
-            <button className="text-xl text-white bg-[#47496f] hover:bg-[#415239] px-6 py-3 font-semibold">
+            <button className="text-xl text-white bg-[#718498] hover:bg-[#415239] px-6 py-3 font-semibold">
               Contact us
             </button>
           </li>
