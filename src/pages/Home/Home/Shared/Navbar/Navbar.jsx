@@ -1,6 +1,15 @@
-import { IoMenu, IoClose } from 'react-icons/io5';
+import { useState } from 'react';
+import { FaBars } from "react-icons/fa";
+import { FaXmark } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
 
   return (
     <div className='bg-white shadow'>
@@ -16,7 +25,7 @@ const Navbar = () => {
             className="text-3xl cursor-pointer mx-2 md:hidden block"
             onClick={toggleMenu}
           >
-            {menuOpen ? <IoClose /> : <IoMenu />}
+            {menuOpen ? <FaXmark/> : <FaBars />}
           </span>
         </div>
 
@@ -41,52 +50,25 @@ const Navbar = () => {
               Admission
             </Link>
           </li>
-          {user && (
+
             <li className="mx-2 my-3 md:my-0">
               <Link to="/mycollege" className="text-sm text-gray-600 hover:text-blue-600 duration-600">
                 My College
               </Link>
             </li>
-          )}
+      
 
           <div className="form-control mx-2 sm:my-5">
             <input type="text" placeholder="Search" className="border border-gray-300 rounded-md bg-white w-36 px-2 py-1" />
           </div>
 
-          {user && !photoError && (
-            <li className="m-2">
-              {photoLoading ? (
-                <span>Loading...</span>
-              ) : (
-                <img className="navbar-img w-10 h-10 rounded-full" src={user.photoURL} alt="" />
-              )}
-            </li>
-          )}
-          {user && (
+    
             <li className="m-2 text-sm">
-              {photoLoading ? (
-                <span>Loading...</span>
-              ) : (
-                <span className="text-black">{user.displayName}</span>
-              )}
+          
+                <span className="text-black">displayName</span>
+          
             </li>
-          )}
-
-          {user ? (
-            <li className="mx-2 my-3 md:my-0">
-              <button onClick={handleLogout} className="bg-blue-600 text-white font-[Poppins] duration-500 px-6 py-2 hover:bg-blue-700 rounded">
-                Logout
-              </button>
-            </li>
-          ) : (
-            <li className="mx-2 my-3 md:my-0">
-              <Link to="/login">
-                <button className="bg-blue-600 text-white font-[Poppins] duration-500 px-6 py-2 hover:bg-blue-700 rounded">
-                  Login
-                </button>
-              </Link>
-            </li>
-          )}
+         
         </ul>
       </nav>
     </div>
