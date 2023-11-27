@@ -17,6 +17,30 @@ const MenuItem = () => {
             <FaInstagram />
         </div>
       </div>
+
+      <div className="flex justify-center my-12">
+      <div className="text-center md:text-left lg:text-left xl:text-left">
+        <div className="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 text-black">
+          <div className="xl:mx-24 lg:mx-12 md:mx-6 mx-6 text-lg my-4">
+            <h2 className="cursor-pointer">Menu Item 1</h2>
+            <h2 className="cursor-pointer">Sub-menu Item 1</h2>
+            <h2 className="cursor-pointer">Another Item</h2>
+            <h2 className="cursor-pointer">Sub-menu Item 2</h2>
+          </div>
+          <div className="xl:mx-24 lg:mx-12 md:mx-6 mx-6 my-4">
+            <h2 className="cursor-pointer">Menu Item 2</h2>
+            <h2 className="cursor-pointer">Yet Another Item</h2>
+          </div>
+          <div className="xl:mx-24 lg:mx-12 md:mx-6 mx-6 my-4">
+            <h2 className="cursor-pointer">Menu Item 3</h2>
+          </div>
+          <div className="my-4">
+            <h2 className="cursor-pointer">Menu Item 4</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
     </div>
   );
 };
