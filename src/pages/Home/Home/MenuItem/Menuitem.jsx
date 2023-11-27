@@ -40,6 +40,9 @@ const MenuItem = () => {
         </div>
       </div>
     </div>
+    <div className="xl:mx-28">
+      <hr className="bg-black border-1 h-0.5 mx-4 md:mx-4 lg:mx-12 xl:mx-32" />
+    </div>
 
     </div>
   );
