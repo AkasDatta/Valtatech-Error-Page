@@ -1,5 +1,6 @@
 import ErrorPage from "../ErrorPage/Errorpage";
 
+
 const Home = () => {
     return (
         <div>
